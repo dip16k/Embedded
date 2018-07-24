@@ -1,0 +1,16 @@
+	AREA AP2,CODE ,READONLY
+		
+	ENTRY
+START
+	NOP
+	LDR R0,MEM
+	LDR R1,=0X01
+	STR R1,[R0]
+	LDR R4,[R0]
+ 	NOP	
+STOP
+
+MEM
+	DCD 0X40000000		;internal ram address
+		
+	END
